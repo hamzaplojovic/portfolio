@@ -1,3 +1,26 @@
-export const Footer = () => {
-    return <h1>Footer</h1>;
-};
+import { Container, ActionIcon } from "@mantine/core";
+import { data } from "./FooterComponents/FooterData";
+import { useStyles } from "./FooterComponents/FooterStyles";
+
+export function Footer() {
+    const { classes } = useStyles();
+
+    return (
+        <div className={classes.footer}>
+            <Container className={classes.inner}>
+                {data.map((item) => {
+                    return (
+                        <ActionIcon
+                            size="lg"
+                            component="a"
+                            href={item.link}
+                            target="_blank"
+                        >
+                            <item.icon size={30} stroke={0.5} />
+                        </ActionIcon>
+                    );
+                })}
+            </Container>
+        </div>
+    );
+}

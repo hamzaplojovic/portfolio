@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header, Container, Group, Burger, Title } from "@mantine/core";
+import { Header, Container, Group, Burger, Button } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { SwitchToggle } from "./Toggle/Toggle";
 import { data } from "./HeaderComponents/HeaderData";
@@ -31,9 +31,11 @@ function HeaderComponent({ links }: HeaderSimpleProps) {
     ));
 
     return (
-        <Header height={60} mb={120}>
+        <Header height={60}>
             <Container className={classes.header}>
-                <Title style={{ fontWeight: 100 }}>Hamza Plojovic</Title>
+                <Button variant="subtle" style={{ fontSize: 20 }}>
+                    Hamza Plojovic
+                </Button>
                 <Group spacing={50} className={classes.links}>
                     {items}
                     <SwitchToggle />
