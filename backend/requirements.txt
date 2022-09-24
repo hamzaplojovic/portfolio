@@ -3,4 +3,3 @@ fastapi
 python-jose
 pydantic
 httpx
-python-dotenv

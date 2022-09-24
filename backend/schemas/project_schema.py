@@ -3,10 +3,8 @@ from pydantic import BaseModel
 
 class ProjectBase(BaseModel):
     name: str
-    desc: str
-    link: str
-    github: str
     icon: str
+    github: str
 
 
 class Project(ProjectBase):
