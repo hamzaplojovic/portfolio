@@ -31,7 +31,9 @@ const useStyles = createStyles((theme) => ({
         paddingTop: "21vh",
         [BREAKPOINT]: {
             paddingBottom: 80,
-            paddingTop: 80,
+            paddingTop: 180,
+            paddingLeft: "10%",
+            paddingRight: "10%",
         },
     },
 

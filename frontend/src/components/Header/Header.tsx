@@ -5,6 +5,7 @@ import { SwitchToggle } from "./Toggle/Toggle";
 import { data } from "./HeaderComponents/HeaderData";
 import { useStyles } from "./HeaderComponents/HeaderStyles";
 import { useLocation } from "react-router-dom";
+import { DropDown } from "./DropDown/DropDown";
 
 interface HeaderSimpleProps {
     links: { link: string; label: string }[];
@@ -31,23 +32,30 @@ function HeaderComponent({ links }: HeaderSimpleProps) {
     ));
 
     return (
-        <Header height={60}>
-            <Container className={classes.header}>
-                <Button variant="subtle" style={{ fontSize: 20 }}>
-                    Hamza Plojovic
-                </Button>
-                <Group spacing={50} className={classes.links}>
-                    {items}
-                    <SwitchToggle />
-                </Group>
-
-                <Burger
-                    opened={opened}
-                    onClick={toggle}
-                    className={classes.burger}
-                />
-            </Container>
-        </Header>
+        <>
+            <Header height={60}>
+                <Container className={classes.header}>
+                    <Button
+                        variant="subtle"
+                        style={{ fontSize: 20 }}
+                        component="a"
+                        href="/"
+                    >
+                        Hamza Plojovic
+                    </Button>
+                    <Group spacing={50} className={classes.links}>
+                        {items}
+                        <SwitchToggle />
+                    </Group>
+                    <Burger
+                        opened={opened}
+                        onClick={toggle}
+                        className={classes.burger}
+                    />
+                </Container>
+            </Header>
+            {opened === true && <DropDown />}
+        </>
     );
 }
 
