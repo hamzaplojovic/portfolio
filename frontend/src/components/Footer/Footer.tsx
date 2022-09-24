@@ -16,7 +16,7 @@ export function Footer() {
                             href={item.link}
                             target="_blank"
                         >
-                            <item.icon size={30} stroke={0.5} />
+                            <item.icon size={30} stroke={1} />
                         </ActionIcon>
                     );
                 })}

@@ -12,7 +12,8 @@ export const useStyles = createStyles((theme) => ({
 
     inner: {
         width: "100%",
-        background: theme.colors.dark[7],
+        background:
+            theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
         display: "flex",
         justifyContent: "space-evenly",
         padding: "0.5% 0%",
