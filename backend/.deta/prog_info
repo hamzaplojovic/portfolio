@@ -1,0 +1,1 @@
+{"id":"019cf9ae-da95-4f79-bee8-8cfe51027d73","space":26161,"runtime":"python3.9","name":"backend","path":"dxgblc","project":"a0ek6700","account":"144798365827","region":"eu-central-1","deps":["deta","fastapi","python-jose","pydantic","httpx","python-dotenv"],"envs":["PROJECT_KEY"],"public":true,"log_level":"off","cron":""}
