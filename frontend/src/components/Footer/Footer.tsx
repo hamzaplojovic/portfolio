@@ -11,6 +11,7 @@ export function Footer() {
                 {data.map((item) => {
                     return (
                         <ActionIcon
+                            key={item.link}
                             size="lg"
                             component="a"
                             href={item.link}

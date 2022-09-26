@@ -1,5 +1,4 @@
 from deta import Deta
-from fastapi import status, HTTPException
 import httpx
 
 deta = Deta("a0ek6700_fRxhARKyW6MNuqi8n8jrzd25Eyi3vUTo")
@@ -19,10 +18,17 @@ def create_project(request):
         request["github"]+"/languages"
     repo_contributors = "https://api.github.com/repos/hamzaplojovic/" + \
         request["github"]+"/contributors"
+    languages = httpx.get(repo_languages).json()
+    languages_numbers = [int(languages[x]) for x in languages]
+    languages_names = [x for x in languages]
+    languages_sum = sum(languages_numbers)
 
     r = httpx.get(github_repo).json()
     request["origin"] = r["created_at"]
-    request["languages"] = httpx.get(repo_languages).json()
+    request["languages"] = [int((int(x)/languages_sum) * 100)
+                            for x in languages_numbers]
+    request["languages"] = [{"language": languages_names[x], "percentage":request["languages"][x]}
+                            for x in range(len(languages_names))]
     request["description"] = r["description"]
     request["link"] = r["homepage"]
     request["license"] = r["license"]
