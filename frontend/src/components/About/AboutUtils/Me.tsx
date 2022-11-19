@@ -1,8 +1,6 @@
-
-
 export const Me = () => {
     return (
-    <div className="about-me">
+    <div className="about-me" data-aos="fade-up" data-aos-duration="500">
         <div className="about-me-heading">
             <div className="about-me-id">
                 <h1>1.1</h1>
