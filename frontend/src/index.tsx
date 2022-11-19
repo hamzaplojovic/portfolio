@@ -1,12 +1,7 @@
-import ReactDOM from "react-dom/client";
-import { MantineProvider } from "@mantine/core";
-import { App } from "./components/App";
+import ReactDOM from 'react-dom/client';
+import { App } from './components/App';
+import "./index.scss"
 
-const root = ReactDOM.createRoot(
-    document.getElementById("root") as HTMLElement
-);
-root.render(
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-        <App />
-    </MantineProvider>
-);
+ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+).render(<App />);

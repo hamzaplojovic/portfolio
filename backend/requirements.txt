@@ -1,5 +1,0 @@
-deta
-fastapi
-python-jose
-pydantic
-httpx
