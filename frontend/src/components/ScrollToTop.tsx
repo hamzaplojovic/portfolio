@@ -30,6 +30,6 @@ export const ScrollToTop = () => {
 
     return <>
     {!isVisible && <button className="scroll-to-top" onClick={()=>{
-        scroll.animateScroll(0, null, {speed:1000, easing:"easeInQuad", clip:true})
+        scroll.animateScroll(0, null, {speed:700, easing:"Linear", clip:true})
     }}><IconChevronUp size={50} stroke={0.5} className="scroll-to-top-icon"/></button>}</>
 }
