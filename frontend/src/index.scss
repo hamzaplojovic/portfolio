@@ -34,7 +34,6 @@ iframe {
 }
 
 body {
-    background-color:$raven;
     width: "100%";
 }
 
@@ -43,6 +42,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color:$raven;
+    padding-top: 80px;
+
 }
 
 .about-title {
@@ -73,8 +75,8 @@ body {
     transition: transform 750ms ease-in;
     @media screen and (max-width: 768px) {
         width: 90%;
-        margin-top: 19vw;
-        height:700px;
+        margin-top: 16vw;
+        height:600px;
         transform: translateY(-35px);
     }
 
@@ -103,6 +105,11 @@ body {
     font-size: 30vw;
     font-weight: 400;
     color: $pearl;
+    transition: all 440ms ease-in-out;
+    @media screen and (max-width: 768px) {
+        font-size: 28vw;
+        transform: translateY(-50px);
+    }
         
 }
 
@@ -258,6 +265,18 @@ hr{
                 line-height: 1.4;
             }
         }
+        @media screen and (max-width: 768px) {
+            .placeholder {
+                display: none;
+            }
+            .about-me-bio { 
+                width: 100%;
+                h4 {
+                    width: 100%;
+                    font-size: 4vw;
+                }
+            }
+        }
     }
 }
 
@@ -303,9 +322,45 @@ hr{
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        .services-heading {
+            width: 100%;
+            h1 {
+                font-size: 8vw;
+                width: 100%;
+            }
+        }
+        .services-items {
+            width: 100%;
+            margin-top: 50px;
+            grid-template-columns: 1fr;
+            gap: 50px;
+
+            .services-item {
+                flex-direction: column;
+                .services-item-id {
+                    margin-bottom: 50px;
+                }
+                .services-item-data {
+                    width: 100%;
+                    .services-item-title {
+                        font-size: 4vw;
+                    }
+                    .services-item-description {
+                        font-size: 3vw;
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 .header {
+    z-index: 1;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 50px;
     display: flex;
@@ -326,6 +381,50 @@ hr{
         h2 {
             font-weight: 300;
             font-size: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            h2 {
+                display: none;
+            }
+            .icon {
+                display: block;
+            }
+            justify-content: end;
+            padding-right: 30px;
+            padding-top: 5px;
+        }
+    }
+}
+
+.icon {
+    display: none;
+    transition: all 300ms ease-in-out;
+    stroke-width: 1.5;
+    &:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+}
+
+.dropdown {
+    // transition: all 0.4s ease-in-out;
+    background-color: rgb(196, 255, 68);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5vw;
+    font-family: 'Helvetica Neue', sans-serif;
+    a {
+        text-decoration: none;
+        color: $pearl;
+        font-size: 16vw;
+        font-weight: 400;
+        margin-bottom: 20px;
+        transition: color 300ms ease-in-out;
+        &:hover {
+            cursor: pointer;
+            color: $arsenic
         }
     }
 }

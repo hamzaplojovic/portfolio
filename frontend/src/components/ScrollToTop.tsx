@@ -7,7 +7,7 @@ var scroll = new SmoothScroll();
 
 export const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(true);
-    const [height, setHeight] = useState(0)
+    const [_, setHeight] = useState(0)
 
     const listenToScroll = () => {
         let heightToHideFrom = 200;
