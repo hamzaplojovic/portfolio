@@ -1,35 +1,14 @@
-import { useEffect, useState } from "react";
-import SmoothScroll from "smooth-scroll"
+import { IconChevronUp } from "@tabler/icons"
 import "../index.scss"
-import {IconChevronUp} from "@tabler/icons"
-
-var scroll = new SmoothScroll();
 
 export const ScrollToTop = () => {
-    const [isVisible, setIsVisible] = useState(true);
-    const [_, setHeight] = useState(0)
-
-    const listenToScroll = () => {
-        let heightToHideFrom = 200;
-        const winScroll = document.body.scrollTop || 
-            document.documentElement.scrollTop;
-        setHeight(winScroll);
+    return <button className="scroll-to-top" onClick={()=>
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }>
+        <IconChevronUp size={50} stroke={0.5} className="scroll-to-top-icon"/>
+    </button>
     
-        if (winScroll > heightToHideFrom) {  
-             isVisible && setIsVisible(false);
-        } else {
-             setIsVisible(true);
-        }  
-      };
-    
-    useEffect(() => {   
-        window.addEventListener("scroll", listenToScroll);
-        return () => 
-           window.removeEventListener("scroll", listenToScroll); 
-      }, [])
-
-    return <>
-    {!isVisible && <button className="scroll-to-top" onClick={()=>{
-        scroll.animateScroll(0, null, {speed:700, easing:"Linear", clip:true})
-    }}><IconChevronUp size={50} stroke={0.5} className="scroll-to-top-icon"/></button>}</>
 }

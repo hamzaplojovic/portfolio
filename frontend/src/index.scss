@@ -55,11 +55,12 @@ body {
     z-index: 1;
     letter-spacing: -1rem;
     @media screen and (max-width: 768px) {
-        letter-spacing: -0.7rem;
+        letter-spacing: -0.4rem;
         font-size: 34vw;
         font-weight: 400;
     }
 }
+
 
 .about-image-wrapper {
     z-index: 0;
@@ -76,7 +77,7 @@ body {
     @media screen and (max-width: 768px) {
         width: 90%;
         margin-top: 16vw;
-        height:600px;
+        height:500px;
         transform: translateY(-35px);
     }
 
@@ -93,10 +94,10 @@ body {
         cursor: pointer;
     }
     @media screen and (max-width: 768px) {
-        width: 350px;
-        height: 350px;
+        width: 250px;
+        height: 250px;
         stroke-width: 2;
-        margin-top: 175px;
+        margin-top: 125px;
 
     }
 }
@@ -428,4 +429,3 @@ hr{
         }
     }
 }
-
