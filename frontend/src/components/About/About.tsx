@@ -6,7 +6,7 @@ import { Me } from "./AboutUtils/Me"
 import { Services } from "./AboutUtils/Services"
 import Aos from "aos"
 import "aos/dist/aos.css"
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 
 export const About = (props: {toggle:boolean}) => {
     useEffect(() => {

@@ -1,12 +1,14 @@
 import "aos/dist/aos.css"
 import Aos from "aos"
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 
 interface ServicesItemInterface {
     id: string
     title:string
     description:string
 }
+
+
 
 const ServicesItem = (props: ServicesItemInterface) => {
     return(
@@ -37,8 +39,8 @@ export const Services = () => {
                 <h1>My core services and capabilities</h1>
             </div>
             <div className="services-items">
-                {data.map((item:any)=>{
-                    return <ServicesItem id={item.id} title={item.title} description={item.description}
+                {data.map((item:ServicesItemInterface)=>{
+                    return <ServicesItem key={item.id} id={item.id} title={item.title} description={item.description}
                     data-aos="fade-up" data-aos-duration="500"/>
                 })}
             </div>

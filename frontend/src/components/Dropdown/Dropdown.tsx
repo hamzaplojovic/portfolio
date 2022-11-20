@@ -1,6 +1,6 @@
 import "../../index.scss"
 import { useTransition, animated } from "react-spring"
-import { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 
 export const Dropdown = (props: {
     isOpen:boolean,

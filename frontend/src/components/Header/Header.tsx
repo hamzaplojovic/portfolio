@@ -1,7 +1,13 @@
 import "../../index.scss"
 import {IconMenu, IconX} from "@tabler/icons"
+import React from "react"
 
-export const Header = (props: {toggle:boolean, setToggle:any}) => {
+interface HeaderInterface {
+    toggle: boolean
+    setToggle: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Header = (props: HeaderInterface) => {
     return <div className="header">
         <h1>Hamza Plojovic</h1>
         <div className="header-items">

@@ -1,3 +1,5 @@
+import React from "react"
+
 export const Me = () => {
     return (
     <div className="about-me" data-aos="fade-up" data-aos-duration="500">

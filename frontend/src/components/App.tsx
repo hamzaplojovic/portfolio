@@ -2,7 +2,7 @@ import { About } from "./About/About"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Header } from "./Header/Header"
 import { Dropdown } from "./Dropdown/Dropdown"
-import { useState } from "react"
+import React, { useState } from "react"
 
 export const App = () => {
     const [toggle, setToggle] = useState(false);

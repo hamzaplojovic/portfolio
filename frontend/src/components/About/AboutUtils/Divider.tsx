@@ -1,7 +1,8 @@
+import React from "react"
+
 interface DividerInterface {
     id: string
 }
-
 
 export const Divider = (props:DividerInterface) => {
     return (
