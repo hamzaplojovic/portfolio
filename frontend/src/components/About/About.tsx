@@ -27,6 +27,6 @@ export const About = (props: {toggle:boolean}) => {
         <Divider id="2.0"/>
         <Services/>
         <Divider id="3.0"/>
-    </div>: <Dropdown isOpen={props.toggle} toggleAnimation={true}/>}
+    </div>: <Dropdown isOpen={props.toggle} toggleAnimation/>}
     </>
 }
