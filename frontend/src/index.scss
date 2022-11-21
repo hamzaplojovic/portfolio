@@ -369,31 +369,32 @@ hr {
     display: flex;
     font-family: 'Helvetica Neue', sans-serif;
     padding-top: 20px;
-    h1 {
+    a {
         width: 70%;
         margin-left: 50px;
         font-weight:350;
-        font-size: 25px
+        font-size: 25px;
+        text-decoration: none;  
+
 
     }
     .header-items {
-        padding-top: 10px;
+        padding: 10px 5% 0% 5%;
         width: 30%;
         display: flex;
         justify-content: space-evenly;
-        h2 {
+        a {
             font-weight: 300;
             font-size: 20px;
         }
         @media screen and (max-width: 768px) {
-            h2 {
+            a {
                 display: none;
             }
             .icon {
                 display: block;
             }
             justify-content: end;
-            padding-right: 30px;
             padding-top: 5px;
         }
     }
@@ -409,7 +410,7 @@ hr {
   }
 }
 
-.dropdown {
+.dropdown-green, .dropdown-black {
     // transition: all 0.4s ease-in-out;
     background-color: rgb(196, 255, 68);
     height: 100vh;
@@ -421,7 +422,7 @@ hr {
     a {
         text-decoration: none;
         color: $pearl;
-        font-size: 16vw;
+        font-size: 17vw;
         font-weight: 400;
         margin-bottom: 20px;
         transition: color 300ms ease-in-out;
@@ -432,10 +433,23 @@ hr {
     }
   }
 
+.dropdown-black {
+    background-color: $black;
+    a {
+        color: $white;
+        &:hover {
+            color: $chateau;
+        }
+    }
+
+  }
+
 
 .contact {
+    font-family: 'Helvetica Neue', sans-serif;
     background-color: $ebpony;
     color: white;
+    padding-top: 100px;
     .contact-heading {
         font-size: 28vw;
         font-weight: 400;
@@ -492,12 +506,15 @@ hr {
     background-color: white;
     height: 2px;
     border: 1px solid white;
+    margin-left: 4%;
+
 }
 
 .contact-email {
     font-size: 17vw;
     font-weight: 400;
     margin-right: 5vw;
+    padding-left: 3%;
 }
 
 .contact-email-wrapper {
@@ -586,10 +603,13 @@ hr {
             h1 {
                 font-size: 17vw;
                 font-weight: 400;
+                margin-left:3%
             }
             hr {
                 width: 100%;
                 border: 1px solid white;
+                margin-left: 5%;
+
             }
             .social-media-icon {
                 width: 10vw;
