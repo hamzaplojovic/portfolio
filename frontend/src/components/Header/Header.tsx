@@ -5,17 +5,18 @@ import React from "react"
 interface HeaderInterface {
     toggle: boolean
     setToggle: React.Dispatch<React.SetStateAction<boolean>>
+    color: string
 }
 
 export const Header = (props: HeaderInterface) => {
     return <div className="header">
-        <h1>Hamza Plojovic</h1>
+        <a href="/" className="header-title" style={{"color":props.color}}>Hamza Plojovic</a>
         <div className="header-items">
-            <h2>Projects</h2>
-            <h2>About</h2>
-            <h2>Contacts</h2>
-            { props.toggle === false ? <IconMenu size={30} onClick={()=>props.setToggle(true)} className="icon"/> 
-            : <IconX size={30} onClick={()=>props.setToggle(false)} className="icon"/>}
+            <a href="/" style={{"color":props.color}}>About</a>
+            <a href="/projects" style={{"color":props.color}}>Projects</a>
+            <a href="/contact" style={{"color":props.color}}>Contact</a>
+            { props.toggle === false ? <IconMenu size={30} onClick={()=>props.setToggle(true)} className="icon" color={props.color}/> 
+            : <IconX size={30} onClick={()=>props.setToggle(false)} className="icon" color={props.color}/>}
         </div>
     </div>
 

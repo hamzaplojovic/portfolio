@@ -1,4 +1,4 @@
-import { Dropdown } from "../Dropdown/Dropdown"
+import { DropDownGreen } from "../Dropdown/Dropdown"
 import { ScrollToTop } from "../ScrollToTop"
 import { Banner } from "./AboutUtils/Banner"
 import { Divider } from "./AboutUtils/Divider"
@@ -27,6 +27,6 @@ export const About = (props: {toggle:boolean}) => {
         <Divider id="2.0"/>
         <Services/>
         <Divider id="3.0"/>
-    </div>: <Dropdown isOpen={props.toggle} toggleAnimation={true}/>}
+    </div>: <DropDownGreen toggle={props.toggle} />}
     </>
 }
