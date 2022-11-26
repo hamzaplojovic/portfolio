@@ -1,8 +1,9 @@
+import React, { useState } from "react"
 import { About } from "./About/About"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Header } from "./Header/Header"
-import React, { useState } from "react"
 import { Contact } from "./Contact/Contact"
+import { Projects } from "./Projects/Projects"
 
 export const App = () => {
     const [toggle, setToggle] = useState(false);
@@ -12,6 +13,7 @@ export const App = () => {
         <Routes>
             <Route path="/" element={<About toggle={toggle}/>}/>
             <Route path="/contact" element={<Contact toggle={toggle}/>}/>
+            <Route path="/projects" element={<Projects toggle={toggle}/>}/>
         </Routes>
     </BrowserRouter>
 }
